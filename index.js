@@ -7,10 +7,16 @@ const run = async () => {
 		// if (github.context.payload.action !== "kati") return
 
 		const issue = github.context.payload.issue
-		if (!issue) return
+		if (!issue) {
+			console.error('no issue')
+			return
+		}
 
 		const token = process.env['GITHUB_TOKEN']
-		if (!token) return
+		if (!token) {
+			console.error('no token')
+			return
+		}
 
 		const octokit = new github.GitHub(token)
 		const nwo = process.env['GITHUB_REPOSITORY'] || '/'
@@ -29,5 +35,3 @@ const run = async () => {
 }
 
 run()
-
-export default run
