@@ -1,0 +1,13 @@
+name: "Happy Birthday"
+description: "Tells users happy birthday"
+author: "pvinis@gmail.com"
+
+runs:
+  using: "node12"
+  main: "index.js"
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+branding:
+  icon: "loader"
+  color: "purple"

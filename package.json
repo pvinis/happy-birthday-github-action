@@ -1,0 +1,13 @@
+{
+  "name": "happy-birthday-github-action",
+  "version": "0.1.0",
+  "scripts": {},
+  "main": "index.js",
+  "repository": "git@github.com:pvinis/happy-birthday-github-action.git",
+  "author": "Pavlos Vinieratos <pvinis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  }
+}
