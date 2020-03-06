@@ -13,6 +13,7 @@ const run = async () => {
 			console.error('no issue')
 			return
 		}
+		console.log('issue owner?', issue.owner)
 
 		console.debug('get token')
 		const token = core.getInput('github-token')
@@ -23,8 +24,7 @@ const run = async () => {
 
 		console.debug('init github')
 		const octokit = new github.GitHub(token)
-		const nwo = process.env['GITHUB_REPOSITORY'] || '/'
-		const [owner, repo] = nwo.split('/')
+		const {owner, repo} = github.context.payload.repo
 
 		console.debug('send message')
 		const happyBirthdayMessage = 'Happy Birthday!!'
