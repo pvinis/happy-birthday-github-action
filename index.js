@@ -13,7 +13,7 @@ const run = async () => {
 			console.error('no issue')
 			return
 		}
-		console.log('issue owner?', issue.owner)
+		console.log('payload', github.context.payload)
 
 		console.debug('get token')
 		const token = core.getInput('github-token')
