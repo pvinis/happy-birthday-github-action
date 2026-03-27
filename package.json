@@ -7,7 +7,7 @@
   "author": "Pavlos Vinieratos <pvinis@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^3.0.0",
     "@actions/github": "^2.1.1"
   }
 }
